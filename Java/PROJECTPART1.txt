@@ -1,0 +1,283 @@
+form 1:-
+package cab;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.SwingConstants;
+import javax.swing.*;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.awt.event.ActionEvent;
+public class grabacab extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JPasswordField passwordField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					grabacab frame = new grabacab();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public grabacab() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Username");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 25));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(655, 124, 188, 45);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Password");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 25));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(672, 216, 168, 39);
+		contentPane.add(lblNewLabel_1);
+		
+        
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		textField.setBounds(954, 114, 351, 55);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		
+		JButton btnNewButton = new JButton("Submit");
+		btnNewButton.setBackground(new Color(255, 153, 153));
+		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent a1) 
+			{
+				
+			  Connection c=driver.getConnection(); 
+			  
+			
+				try {
+					String s1=textField.getText();
+					String s2=passwordField.getText();
+					PreparedStatement ps = null;
+					ps = c.prepareStatement("select uname,pwd from customer");
+				    ResultSet rs=ps.executeQuery();
+					while(rs.next())
+					{
+				String u1=rs.getString(1);
+				String u2=rs.getString(2);
+						if((u1.equals(s1))&&(u2.equals(s2)))
+						{
+                       
+						      w3 w= new w3();
+						      w.main(null);
+						}
+										
+					
+						
+					}
+					
+						
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				 
+			}
+		});
+		btnNewButton.setBounds(1098, 313, 207, 72);
+		contentPane.add(btnNewButton);
+		
+		ImageIcon i1=new ImageIcon("images/cab3.jpg");
+		JLabel lblNewLabel_2 = new JLabel(i1);
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setBackground(new Color(255, 153, 51));
+		lblNewLabel_2.setBounds(28, 222, 586, 368);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblGrabACab = new JLabel("Grab a Cab");
+		lblGrabACab.setFont(new Font("Times New Roman", Font.BOLD, 60));
+		lblGrabACab.setHorizontalAlignment(SwingConstants.CENTER);
+		lblGrabACab.setBounds(136, 32, 364, 105);
+		contentPane.add(lblGrabACab);
+		
+		JButton btnNewButton_1 = new JButton("Cancel");
+		btnNewButton_1.setBackground(new Color(255, 153, 153));
+		btnNewButton_1.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+		btnNewButton_1.setBounds(1137, 620, 168, 72);
+		contentPane.add(btnNewButton_1);
+		btnNewButton_1.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent a2) 
+			{
+			   dispose();
+		       
+			}
+		});
+		
+		JButton btnNewButton_2 = new JButton("Sign In");
+		btnNewButton_2.setBackground(new Color(255, 153, 153));
+		btnNewButton_2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				w2 ow1=new w2();
+				ow1.main(null);
+			}
+		});
+		btnNewButton_2.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btnNewButton_2.setBounds(1184, 462, 121, 55);
+		contentPane.add(btnNewButton_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("Sign in to register");
+		lblNewLabel_3.setFont(new Font("Times New Roman", Font.PLAIN, 40));
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_3.setBounds(737, 456, 397, 78);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("Ready for take off");
+		lblNewLabel_4.setFont(new Font("Segoe Script", Font.ITALIC, 25));
+		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4.setBounds(160, 135, 312, 48);
+		contentPane.add(lblNewLabel_4);
+		
+		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		passwordField.setBounds(954, 211, 351, 57);
+		contentPane.add(passwordField);
+		
+		
+	}
+}
+
+
+form 2:-
+package attendance;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import javax.swing.*;
+public class w1 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JPasswordField passwordField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					w1 frame = new w1();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public w1() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("User name");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		lblNewLabel.setBounds(604, 318, 151, 35);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblPassword = new JLabel("Password");
+		lblPassword.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		lblPassword.setBounds(604, 422, 135, 42);
+		contentPane.add(lblPassword);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		textField.setBounds(905, 313, 389, 52);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		passwordField = new JPasswordField();
+		passwordField.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		passwordField.setBounds(905, 421, 389, 52);
+		contentPane.add(passwordField);
+		
+		JLabel lblNewLabel_1 = new JLabel("Everyday Counts");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("Segoe Script", Font.BOLD | Font.ITALIC, 60));
+		lblNewLabel_1.setBounds(356, 88, 631, 73);
+		contentPane.add(lblNewLabel_1);
+		
+		JButton btnNext = new JButton("Next ->");
+		btnNext.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		btnNext.setBounds(1178, 615, 116, 35);
+		contentPane.add(btnNext);
+		
+		ImageIcon i1=new ImageIcon("images/w1p3.jpg");
+		JLabel lblNewLabel_2 = new JLabel(i1);
+		lblNewLabel_2.setBounds(88, 252, 397, 284);
+		contentPane.add(lblNewLabel_2);
+		
+		ImageIcon i2=new ImageIcon("images/w1p1.jpg");
+		JLabel lblNewLabel_3 = new JLabel(i2);
+		lblNewLabel_3.setBounds(1058, 50, 277, 183);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblOnlyFor = new JLabel("* only for teaching staff");
+		lblOnlyFor.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblOnlyFor.setBounds(88, 658, 297, 25);
+		contentPane.add(lblOnlyFor);
+	}
+}

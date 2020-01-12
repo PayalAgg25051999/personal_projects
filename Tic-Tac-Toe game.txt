@@ -1,0 +1,128 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+
+int choice;
+
+void display(char b[3][3])
+{
+clrscr();
+cout<<"\n\t\tCross-Zero Game!!";
+cout<<"\n\t\tPlayer_1 Symbol = X";
+cout<<"\n\t\tPlayer_2 Symbol = O";
+
+cout<<"\n\n";
+cout<<"\t\t     |     |     "<<endl;
+cout<<"\t\t"<<"  "<<b[0][0]<<"  "<<"|  "<<b[0][1]<<"  "<<"|  "<<b[0][2]<<"  "<<endl;
+cout<<"\t\t_____|_____|_____"<<endl;
+cout<<"\t\t     |     |     "<<endl;
+cout<<"\t\t"<<"  "<<b[1][0]<<"  "<<"|  "<<b[1][1]<<"  "<<"|  "<<b[1][2]<<"  "<<endl;
+cout<<"\t\t_____|_____|_____"<<endl;
+cout<<"\t\t     |     |     "<<endl;
+cout<<"\t\t"<<"  "<<b[2][0]<<"  "<<"|  "<<b[2][1]<<"  "<<"|  "<<b[2][2]<<"  "<<endl;
+cout<<"\t\t     |     |     "<<endl;
+}
+
+void player_turn(char b[3][3],int &turn,int &row,int &col)
+{
+if((b[0][0]!='X'&& b[0][0]!='O') || (b[0][1]!='X'&& b[0][1]!='O') || (b[0][2]!='X'&& b[0][2]!='O')|| (b[1][0]!='X'&& b[1][0]!='O')|| (b[1][1]!='X'&& b[1][1]!='O')|| (b[1][2]!='X'&& b[1][2]!='O')|| (b[2][0]!='X'&& b[2][0]!='O')|| (b[2][1]!='X'&& b[2][1]!='O')|| (b[2][2]!='X'&& b[2][2]!='O'))
+{
+  if(turn==1)
+  {
+  cout<<"\n\tPlayer_1 [X] Turn:";
+  cin>>choice;
+  }
+  else if(turn==0)
+  {
+  cout<<"\n\tPlayer_2 [O] Turn:";
+  cin>>choice;
+  }
+
+
+switch(choice)
+  {
+  case 1:row=0;col=0; break;
+  case 2:row=0;col=1; break;
+  case 3:row=0;col=2; break;
+  case 4:row=1;col=0; break;
+  case 5:row=1;col=1; break;
+  case 6:row=1;col=2; break;
+  case 7:row=2;col=0; break;
+  case 8:row=2;col=1; break;
+  case 9:row=2;col=2; break;
+  default:cout<<"Wrong choice!!";
+       break;
+   }
+    if(turn==1 && b[row][col]!='X' && b[row][col]!='O')
+	       {
+	  b[row][col]='X';
+	       turn=0;
+		}
+
+
+    else if(turn==0 && b[row][col]!='X' && b[row][col]!='O')
+		 {
+		 b[row][col]='O';
+		 turn=1;
+		 }
+	    else {
+		 cout<<"\nAlready Filled, Choose Other Box!!";
+		 player_turn(b,turn,row,col);
+		 }
+}
+}
+
+
+int gameover(char b[3][3],int &draw)
+{
+
+for(int i=0;i<3;i++)
+{
+if((b[i][0]==b[i][1] && b[i][0]==b[i][2]) || (b[0][i]==b[1][i] && b[0][i]==b[2][i]))
+return 0;
+}
+
+if((b[0][0]==b[1][1] && b[0][0]==b[2][2]) || (b[0][2]==b[1][1] && b[0][2]==b[2][0]))
+     return 0;
+
+else if((b[0][0]=='X'|| b[0][0]=='O') && (b[0][1]=='X'|| b[0][1]=='O') &&(b[0][2]=='X'|| b[0][2]=='O') &&(b[1][0]=='X'|| b[1][0]=='O') &&(b[1][1]=='X'|| b[1][1]=='O') &&(b[1][2]=='X'|| b[1][2]=='O') &&(b[2][0]=='X'|| b[2][0]=='O') &&(b[2][1]=='X'|| b[2][1]=='O') && (b[2][2]=='X'|| b[2][2]=='O'))
+  {
+  draw=0;
+  return 0;
+  }
+else
+return 1;
+}
+
+int main()
+{
+clrscr();
+char ch='y';
+while(ch=='y'||ch=='Y')
+{
+int row=0;
+int col=0;
+int turn=1;
+int draw=1;
+
+char b[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
+   int t=1;
+   while(t==1)
+   {
+   display(b);
+   player_turn(b,turn,row,col);
+   t=gameover(b,draw);
+   display(b);
+   }
+
+if(turn==0 && draw==1)
+    cout<<"\n\t\tPlayer1 [X] is Winner!!" ;
+else if(turn==1 && draw==1)
+    cout<<"\n\t\tPlayer2 [O] is Winner!!" ;
+else if(draw==0 && (turn==0 || turn==1))
+    cout<<"\n\t\tGame Draw!!";
+cout<<"\n\tDo You Wanna Restart The Game(y/n):" ;
+cin>>ch;
+}
+return 0;
+}

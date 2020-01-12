@@ -1,0 +1,551 @@
+form 3:-
+package cab;
+
+import java.awt.BorderLayout;
+
+import javax.swing.*;
+import java.awt.EventQueue;
+
+import javax.swing.border.EmptyBorder;
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+public class w2 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_6;
+	private JTextField textField_7;
+	private JTextField textField_8;
+	private JTextField textField_9;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					w2 frame = new w2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public w2() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Enter these details");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 50));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(152, 30, 530, 58);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Name");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_1.setBounds(38, 112, 111, 39);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Contact Number");
+		lblNewLabel_2.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_2.setBounds(38, 162, 111, 35);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("Email ID");
+		lblNewLabel_3.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_3.setBounds(38, 219, 111, 25);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("Address");
+		lblNewLabel_4.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_4.setBounds(38, 267, 111, 25);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("State");
+		lblNewLabel_5.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_5.setBounds(38, 313, 111, 37);
+		contentPane.add(lblNewLabel_5);
+		
+		JLabel lblNewLabel_6 = new JLabel("City");
+		lblNewLabel_6.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_6.setBounds(38, 378, 111, 33);
+		contentPane.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("User Name");
+		lblNewLabel_7.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_7.setBounds(38, 438, 104, 35);
+		contentPane.add(lblNewLabel_7);
+		
+		JLabel lblNewLabel_8 = new JLabel("Password");
+		lblNewLabel_8.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_8.setBounds(38, 503, 104, 30);
+		contentPane.add(lblNewLabel_8);
+		
+		JLabel lblNewLabel_9 = new JLabel("Confirm Password");
+		lblNewLabel_9.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_9.setBounds(38, 565, 134, 39);
+		contentPane.add(lblNewLabel_9);
+		
+		JLabel lblNewLabel_10 = new JLabel("Adhar Card Number");
+		lblNewLabel_10.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNewLabel_10.setBounds(38, 637, 166, 39);
+		contentPane.add(lblNewLabel_10);
+		
+		textField = new JTextField();
+		textField.setBounds(228, 122, 343, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(228, 170, 343, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(228, 222, 343, 20);
+		contentPane.add(textField_2);
+		textField_2.setColumns(10);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(228, 270, 343, 20);
+		contentPane.add(textField_3);
+		textField_3.setColumns(10);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(228, 322, 343, 20);
+		contentPane.add(textField_4);
+		textField_4.setColumns(10);
+		
+		textField_5 = new JTextField();
+		textField_5.setBounds(228, 378, 343, 20);
+		contentPane.add(textField_5);
+		textField_5.setColumns(10);
+		
+		textField_6 = new JTextField();
+		textField_6.setBounds(228, 446, 343, 20);
+		contentPane.add(textField_6);
+		textField_6.setColumns(10);
+		
+		textField_7 = new JTextField();
+		textField_7.setBounds(228, 509, 343, 20);
+		contentPane.add(textField_7);
+		textField_7.setColumns(10);
+		
+		textField_8 = new JTextField();
+		textField_8.setBounds(228, 575, 343, 20);
+		contentPane.add(textField_8);
+		textField_8.setColumns(10);
+		
+		textField_9 = new JTextField();
+		textField_9.setBounds(228, 647, 343, 20);
+		contentPane.add(textField_9);
+		textField_9.setColumns(10);
+		
+		ImageIcon i1=new ImageIcon("images/cab3.jpg");
+		JLabel lblNewLabel_11 = new JLabel(i1);
+		lblNewLabel_11.setBounds(874, 235, 398, 266);
+		contentPane.add(lblNewLabel_11);
+		
+		JButton btnNewButton = new JButton("Submit");
+		btnNewButton.setFont(new Font("Times New Roman", Font.BOLD, 35));
+		btnNewButton.setBackground(new Color(153, 204, 0));
+		btnNewButton.setBounds(1085, 565, 173, 58);
+		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e2)
+			{
+				Connection c=driver.getConnection();
+				String s1=textField.getText();
+				String s2=textField_1.getText();
+				String s3=textField_2.getText();
+				String s4=textField_3.getText();
+				String s5=textField_4.getText();
+				String s6=textField_5.getText();
+				String s7=textField_6.getText();
+				String s8=textField_7.getText();
+				String s9=textField_9.getText();
+				String check=textField_8.getText();
+				if(s8.equals(check))
+				{
+				try
+				{
+					
+					PreparedStatement ps=null;
+					ps=c.prepareStatement("INSERT INTO customer(uname,pwd,name,cno,eid,addr,city,state,ano) VALUES(?,?,?,?,?,?,?,?,?)");
+					
+					ps.setString(1,s7);
+					ps.setString(2,s8);
+					ps.setString(3,s1);
+					ps.setString(4,s3);
+					ps.setString(5,s2);
+					ps.setString(6,s4);
+					ps.setString(7,s6);
+					ps.setString(8,s5);
+					ps.setString(9,s9);
+					ps.executeUpdate();
+				    
+				w3 ow1=new w3();
+				ow1.main(null);
+					
+				}
+				catch(SQLException e)
+				{
+					e.printStackTrace();
+				}
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(w2.this,"password does not matches");
+				}
+			}
+		});
+		
+		JLabel lblNewLabel_12 = new JLabel("Grab a Cab");
+		lblNewLabel_12.setFont(new Font("Times New Roman", Font.BOLD, 50));
+		lblNewLabel_12.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_12.setBounds(844, 100, 439, 70);
+		contentPane.add(lblNewLabel_12);
+		
+		JLabel lblNewLabel_13 = new JLabel("Ready for take off");
+		lblNewLabel_13.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_13.setFont(new Font("Segoe Script", Font.ITALIC, 20));
+		lblNewLabel_13.setBounds(834, 187, 438, 37);
+		contentPane.add(lblNewLabel_13);
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.setBackground(new Color(153, 204, 51));
+		btnBack.setFont(new Font("Times New Roman", Font.BOLD, 35));
+		btnBack.setBounds(844, 565, 166, 58);
+		contentPane.add(btnBack);
+		btnBack.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				grabacab ow1=new grabacab();
+				ow1.main(null);
+			}
+		});
+		
+		
+	}
+}
+
+form 4:-
+package cab;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.border.EmptyBorder;
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import java.awt.Color;
+public class w3 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					w3 frame = new w3();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public w3() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 204));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Which type of cab you wanna grab!!");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 30));
+		lblNewLabel.setBounds(49, 62, 797, 73);
+		contentPane.add(lblNewLabel);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("4 seater");
+		rdbtnNewRadioButton.setBackground(new Color(255, 255, 204));
+		rdbtnNewRadioButton.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		rdbtnNewRadioButton.setBounds(63, 217, 163, 45);
+		contentPane.add(rdbtnNewRadioButton);
+		rdbtnNewRadioButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				win4 ow1=new win4();
+				ow1.main(null);
+			}
+		});
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("7 seater");
+		rdbtnNewRadioButton_1.setBackground(new Color(255, 255, 204));
+		rdbtnNewRadioButton_1.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		rdbtnNewRadioButton_1.setBounds(63, 314, 163, 45);
+		contentPane.add(rdbtnNewRadioButton_1);
+		rdbtnNewRadioButton_1.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w5 ow1=new w5();
+				ow1.main(null);
+			}
+		});
+		
+		
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("11-13 seater");
+		rdbtnNewRadioButton_2.setBackground(new Color(255, 255, 204));
+		rdbtnNewRadioButton_2.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		rdbtnNewRadioButton_2.setBounds(63, 414, 151, 45);
+		contentPane.add(rdbtnNewRadioButton_2);
+		rdbtnNewRadioButton_2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w6 ow1=new w6();
+				ow1.main(null);
+			}
+		});
+		
+		
+		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton(" 15-20 seater");
+		rdbtnNewRadioButton_3.setBackground(new Color(255, 255, 204));
+		rdbtnNewRadioButton_3.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		rdbtnNewRadioButton_3.setBounds(63, 533, 177, 45);
+		contentPane.add(rdbtnNewRadioButton_3);
+		rdbtnNewRadioButton_3.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w7 ow1=new w7();
+				ow1.main(null);
+			}
+		});
+		
+		
+		ImageIcon i1=new ImageIcon("images/w3offer.gif");
+		JButton btnNewButton = new JButton(i1);
+		btnNewButton.setBackground(new Color(255, 255, 204));
+		btnNewButton.setBounds(830, 270, 299, 232);
+		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+
+				JOptionPane.showMessageDialog(w3.this,"10% off on the journey of greater than 700kms");
+			}
+		});
+		
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		btnBack.setBounds(917, 606, 123, 39);
+		contentPane.add(btnBack);
+		btnBack.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				grabacab ow1=new grabacab();
+				ow1.main(null);
+			}
+		});
+
+		
+		
+	
+	
+	}
+}
+
+form 5:-
+package cab;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+
+public class win4 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					win4 frame = new win4();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+    
+
+	/**
+	 * Create the frame.
+	 */
+	public win4() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(204, 255, 102));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+	
+		ImageIcon i1=new ImageIcon("images/w41.png");
+		JLabel lblNewLabel = new JLabel(i1);
+		lblNewLabel.setBounds(115, 70, 300, 220);
+		contentPane.add(lblNewLabel);
+		
+		ImageIcon i2=new ImageIcon("images/win41.png");
+		JLabel lblNewLabel_1 = new JLabel(i2);
+		lblNewLabel_1.setBounds(487, 59, 316, 246);
+		contentPane.add(lblNewLabel_1);
+		
+		ImageIcon i3=new ImageIcon("images/w43.png");
+		JLabel lblNewLabel_2 = new JLabel(i3);
+		lblNewLabel_2.setBounds(844, 70, 300, 220);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblBus = new JLabel("Alto");
+		lblBus.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblBus.setBounds(213, 301, 99, 35);
+		contentPane.add(lblBus);
+		
+		JLabel lblRateperKm = new JLabel("RATE(per km) :-  14/-");
+		lblRateperKm.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm.setBounds(140, 337, 234, 53);
+		contentPane.add(lblRateperKm);
+		
+		JButton btnBook = new JButton("BOOK");
+		btnBook.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook.setBounds(186, 410, 89, 43);
+		contentPane.add(btnBook);
+		btnBook.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				
+			}
+		});
+		
+		JLabel lblt = new JLabel("Swift Dzire");
+		lblt.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblt.setBounds(551, 301, 194, 35);
+		contentPane.add(lblt);
+		
+		JLabel lblRateperKm2 = new JLabel("RATE(per km) :-  15/-");
+		lblRateperKm2.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm2.setBounds(528, 337, 234, 53);
+		contentPane.add(lblRateperKm2);
+		
+		JButton btnBook2 = new JButton("BOOK");
+		btnBook2.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook2.setBounds(584, 410, 89, 43);
+		contentPane.add(btnBook2);
+	
+		JLabel lblsb = new JLabel(" Duster");
+		lblsb.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblsb.setBounds(926, 301, 200, 35);
+		contentPane.add(lblsb);
+		
+		JLabel lblRateperKm3 = new JLabel("RATE(per km) :-  18/-");
+		lblRateperKm3.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm3.setBounds(866, 337, 234, 53);
+		contentPane.add(lblRateperKm3);
+		
+		JButton btnBook3 = new JButton("BOOK");
+		btnBook3.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook3.setBounds(947, 410, 89, 43);
+		contentPane.add(btnBook3);
+		
+		JButton btnNewButton = new JButton("<-  BACK");
+		btnNewButton.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnNewButton.setBounds(1008, 640, 118, 43);
+		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w3 ow1=new w3();
+				ow1.main(null);
+			}
+		});
+		
+		JButton btnNext = new JButton("NEXT  ->");
+		btnNext.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnNext.setBounds(1192, 640, 126, 43);
+		contentPane.add(btnNext);
+		btnNext.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w8 ow1=new w8();
+				ow1.main(null);
+			}
+		});
+	
+	
+		
+	}
+	
+
+}

@@ -1,0 +1,638 @@
+fomr 6:-
+package cab;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+
+public class w5 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					w5 frame = new w5();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public w5() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(204, 255, 102));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		ImageIcon i1=new ImageIcon("images/w51.jpg");
+		JLabel lblNewLabel = new JLabel(i1);
+		lblNewLabel.setBounds(115, 70, 300, 220);
+		contentPane.add(lblNewLabel);
+		
+		ImageIcon i2=new ImageIcon("images/w52.png");
+		JLabel lblNewLabel_1 = new JLabel(i2);
+		lblNewLabel_1.setBounds(487, 59, 316, 246);
+		contentPane.add(lblNewLabel_1);
+		
+		ImageIcon i3=new ImageIcon("images/w53.png");
+		JLabel lblNewLabel_2 = new JLabel(i3);
+		lblNewLabel_2.setBounds(844, 70, 300, 220);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblBus = new JLabel("Innova");
+		lblBus.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblBus.setBounds(194, 301, 161, 35);
+		contentPane.add(lblBus);
+		
+		JLabel lblRateperKm = new JLabel("RATE(per km) :-  20/-");
+		lblRateperKm.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm.setBounds(156, 337, 234, 53);
+		contentPane.add(lblRateperKm);
+		
+		JButton btnBook = new JButton("BOOK");
+		btnBook.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook.setBounds(207, 410, 89, 43);
+		contentPane.add(btnBook);
+		
+		JLabel lblt = new JLabel("XUV 500");
+		lblt.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblt.setBounds(582, 301, 150, 35);
+		contentPane.add(lblt);
+		
+		JLabel lblRateperKm2 = new JLabel("RATE(per km) :-  25/-");
+		lblRateperKm2.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm2.setBounds(528, 337, 234, 53);
+		contentPane.add(lblRateperKm2);
+		
+		JButton btnBook2 = new JButton("BOOK");
+		btnBook2.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook2.setBounds(584, 410, 89, 43);
+		contentPane.add(btnBook2);
+	
+		JLabel lblsb = new JLabel(" Fortuner");
+		lblsb.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblsb.setBounds(926, 301, 200, 35);
+		contentPane.add(lblsb);
+		
+		JLabel lblRateperKm3 = new JLabel("RATE(per km) :-  28/-");
+		lblRateperKm3.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm3.setBounds(892, 337, 234, 53);
+		contentPane.add(lblRateperKm3);
+		
+		JButton btnBook3 = new JButton("BOOK");
+		btnBook3.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook3.setBounds(947, 410, 89, 43);
+		contentPane.add(btnBook3);
+		
+		JButton btnNewButton = new JButton("<-  BACK");
+		btnNewButton.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnNewButton.setBounds(1008, 640, 118, 43);
+		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w3 ow1=new w3();
+				ow1.main(null);
+			}
+		});
+		
+		JButton btnNext = new JButton("NEXT  ->");
+		btnNext.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnNext.setBounds(1192, 640, 126, 43);
+		contentPane.add(btnNext);
+		btnNext.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w8 ow1=new w8();
+				ow1.main(null);
+			}
+		});
+	
+	}
+
+}
+
+fomr 7:-
+package cab;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+
+public class w6 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					w6 frame = new w6();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public w6() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(204, 255, 102));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		ImageIcon i1=new ImageIcon("images/w61.png");
+		JLabel lblNewLabel = new JLabel(i1);
+		lblNewLabel.setBounds(115, 70, 300, 220);
+		contentPane.add(lblNewLabel);
+		
+		ImageIcon i2=new ImageIcon("images/w62.jpg");
+		JLabel lblNewLabel_1 = new JLabel(i2);
+		lblNewLabel_1.setBackground(new Color(204, 255, 102));
+		lblNewLabel_1.setBounds(487, 59, 316, 246);
+		contentPane.add(lblNewLabel_1);
+		
+		ImageIcon i3=new ImageIcon("images/w63.png");
+		JLabel lblNewLabel_2 = new JLabel(i3);
+		lblNewLabel_2.setBounds(844, 70, 300, 220);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblBus = new JLabel("Cruser");
+		lblBus.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblBus.setBounds(213, 301, 99, 35);
+		contentPane.add(lblBus);
+		
+		JLabel lblRateperKm = new JLabel("RATE(per km) :-  22/-");
+		lblRateperKm.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm.setBounds(140, 337, 234, 53);
+		contentPane.add(lblRateperKm);
+		
+		JButton btnBook = new JButton("BOOK");
+		btnBook.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook.setBounds(212, 410, 89, 43);
+		contentPane.add(btnBook);
+		
+		JLabel lblt = new JLabel(" Mini Traveller");
+		lblt.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblt.setBounds(528, 301, 234, 35);
+		contentPane.add(lblt);
+		
+		JLabel lblRateperKm2 = new JLabel("RATE(per km) :-  25/-");
+		lblRateperKm2.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm2.setBounds(528, 337, 234, 53);
+		contentPane.add(lblRateperKm2);
+		
+		JButton btnBook2 = new JButton("BOOK");
+		btnBook2.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook2.setBounds(584, 410, 89, 43);
+		contentPane.add(btnBook2);
+	
+		JLabel lblsb = new JLabel(" Van");
+		lblsb.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblsb.setBounds(944, 301, 200, 35);
+		contentPane.add(lblsb);
+		
+		JLabel lblRateperKm3 = new JLabel("RATE(per km) :-  20/-");
+		lblRateperKm3.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm3.setBounds(880, 337, 234, 53);
+		contentPane.add(lblRateperKm3);
+		
+		JButton btnBook3 = new JButton("BOOK");
+		btnBook3.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook3.setBounds(947, 410, 89, 43);
+		contentPane.add(btnBook3);
+		
+		JButton btnNewButton = new JButton("<-  BACK");
+		btnNewButton.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnNewButton.setBounds(1008, 640, 118, 43);
+		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w3 ow1=new w3();
+				ow1.main(null);
+			}
+		});
+		
+		JButton btnNext = new JButton("NEXT  ->");
+		btnNext.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnNext.setBounds(1192, 640, 126, 43);
+		contentPane.add(btnNext);
+		btnNext.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w8 ow1=new w8();
+				ow1.main(null);
+			}
+		});
+		
+	}
+
+}
+
+fomr 8:-
+package cab;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class w7 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					w7 frame = new w7();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public w7() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(204, 255, 102));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		ImageIcon i1=new ImageIcon("images/w71.png");
+		JLabel lblNewLabel = new JLabel(i1);
+		lblNewLabel.setBounds(115, 70, 300, 220);
+		contentPane.add(lblNewLabel);
+		
+		ImageIcon i2=new ImageIcon("images/w75.png");
+		JLabel lblNewLabel_1 = new JLabel(i2);
+		lblNewLabel_1.setBounds(487, 59, 316, 246);
+		contentPane.add(lblNewLabel_1);
+		
+		ImageIcon i3=new ImageIcon("images/w74.jpg");
+		JLabel lblNewLabel_2 = new JLabel(i3);
+		lblNewLabel_2.setBounds(844, 70, 300, 220);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblBus = new JLabel("Bus");
+		lblBus.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblBus.setBounds(213, 301, 99, 35);
+		contentPane.add(lblBus);
+		
+		JLabel lblRateperKm = new JLabel("RATE(per km) :-  30/-");
+		lblRateperKm.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm.setBounds(140, 337, 234, 53);
+		contentPane.add(lblRateperKm);
+		
+		JButton btnBook = new JButton("BOOK");
+		btnBook.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook.setBounds(186, 410, 89, 43);
+		contentPane.add(btnBook);
+		
+		JLabel lblt = new JLabel("Traveller");
+		lblt.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblt.setBounds(582, 301, 150, 35);
+		contentPane.add(lblt);
+		
+		JLabel lblRateperKm2 = new JLabel("RATE(per km) :-  25/-");
+		lblRateperKm2.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm2.setBounds(528, 337, 234, 53);
+		contentPane.add(lblRateperKm2);
+		
+		JButton btnBook2 = new JButton("BOOK");
+		btnBook2.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook2.setBounds(584, 410, 89, 43);
+		contentPane.add(btnBook2);
+	
+		JLabel lblsb = new JLabel(" Sleeper Bus");
+		lblsb.setFont(new Font("Tw Cen MT", Font.BOLD, 35));
+		lblsb.setBounds(900, 301, 200, 35);
+		contentPane.add(lblsb);
+		
+		JLabel lblRateperKm3 = new JLabel("RATE(per km) :-  30/-");
+		lblRateperKm3.setFont(new Font("Tw Cen MT", Font.BOLD, 25));
+		lblRateperKm3.setBounds(866, 337, 234, 53);
+		contentPane.add(lblRateperKm3);
+		
+		JButton btnBook3 = new JButton("BOOK");
+		btnBook3.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnBook3.setBounds(947, 410, 89, 43);
+		contentPane.add(btnBook3);
+		
+		JButton btnNewButton = new JButton("<-  BACK");
+		btnNewButton.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnNewButton.setBounds(1008, 640, 118, 43);
+		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w3 ow1=new w3();
+				ow1.main(null);
+			}
+		});
+		
+		JButton btnNext = new JButton("NEXT  ->");
+		btnNext.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		btnNext.setBounds(1192, 640, 126, 43);
+		contentPane.add(btnNext);
+		btnNext.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				w8 ow1=new w8();
+				ow1.main(null);
+			}
+		});
+		
+	}
+	
+}
+
+form 9:-
+package cab;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.border.EmptyBorder;
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import java.awt.Color;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.awt.event.ActionEvent;
+public class w8 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_6;
+	private JTextField textField_7;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					w8 frame = new w8();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public w8() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 1900, 1900);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblLocation = new JLabel("LOCATION(complete address)");
+		lblLocation.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		lblLocation.setBounds(54, 79, 430, 40);
+		contentPane.add(lblLocation);
+		
+		JLabel lblNewLabel = new JLabel("Pick up");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblNewLabel.setBounds(246, 135, 89, 26);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblDestination = new JLabel("Destination");
+		lblDestination.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblDestination.setBounds(246, 187, 115, 26);
+		contentPane.add(lblDestination);
+		
+		textField = new JTextField();
+		textField.setBounds(442, 135, 487, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(442, 191, 487, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel lblWhenYouWant = new JLabel("When you want  cab");
+		lblWhenYouWant.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		lblWhenYouWant.setBounds(54, 236, 339, 33);
+		contentPane.add(lblWhenYouWant);
+		
+		JLabel lblDate = new JLabel("Date");
+		lblDate.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblDate.setBounds(246, 294, 97, 26);
+		contentPane.add(lblDate);
+		
+		JLabel lblTime = new JLabel("Time");
+		lblTime.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblTime.setBounds(246, 341, 60, 26);
+		contentPane.add(lblTime);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(442, 299, 485, 20);
+		contentPane.add(textField_2);
+		textField_2.setColumns(10);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(442, 346, 487, 20);
+		contentPane.add(textField_3);
+		textField_3.setColumns(10);
+		
+		JLabel lblApproxKmsOf = new JLabel("How far your journey is (in Kms) ");
+		lblApproxKmsOf.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		lblApproxKmsOf.setBounds(54, 411, 382, 26);
+		contentPane.add(lblApproxKmsOf);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(531, 415, 295, 26);
+		contentPane.add(textField_4);
+		textField_4.setColumns(10);
+		
+		
+		
+		JLabel lblPaymentWill = new JLabel("*  Payment  will be collected after journey by our driver ,but some amount will be collected by online transfer for security purpose ");
+		lblPaymentWill.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblPaymentWill.setBounds(66, 664, 893, 21);
+		contentPane.add(lblPaymentWill);
+		
+		ImageIcon i1=new ImageIcon("images/w8pic5.jpg");
+		JLabel lblNewLabel_1 = new JLabel(i1);
+		lblNewLabel_1.setBackground(new Color(0, 0, 0));
+		lblNewLabel_1.setBounds(1058, 68, 227, 152);
+		contentPane.add(lblNewLabel_1);
+		
+		ImageIcon i2=new ImageIcon("images/w8pic3.jpg");
+		JLabel lblNewLabel_2 = new JLabel(i2);
+		lblNewLabel_2.setBounds(1058, 282, 227, 140);
+		contentPane.add(lblNewLabel_2);
+		
+		ImageIcon i3=new ImageIcon("images/w8pic6.png");
+		JLabel lblNewLabel_3 = new JLabel(i3);
+		lblNewLabel_3.setBounds(1068, 475, 227, 152);
+		contentPane.add(lblNewLabel_3);
+		
+		JButton btnNext = new JButton("Next");
+		btnNext.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		btnNext.setBounds(1087, 651, 121, 40);
+		contentPane.add(btnNext);
+		
+		JLabel lblNewLabel_4 = new JLabel("one way/two way");
+		lblNewLabel_4.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		lblNewLabel_4.setBounds(54, 475, 252, 40);
+		contentPane.add(lblNewLabel_4);
+		
+		JLabel lblWriteYourUsername = new JLabel("write your username");
+		lblWriteYourUsername.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		lblWriteYourUsername.setBounds(54, 539, 281, 30);
+		contentPane.add(lblWriteYourUsername);
+		
+		textField_5 = new JTextField();
+		textField_5.setBounds(432, 489, 281, 20);
+		contentPane.add(textField_5);
+		textField_5.setColumns(10);
+		
+		textField_6 = new JTextField();
+		textField_6.setBounds(434, 548, 279, 20);
+		contentPane.add(textField_6);
+		textField_6.setColumns(10);
+		
+		JLabel lblEnterCarThat = new JLabel("Enter car that you have selected");
+		lblEnterCarThat.setFont(new Font("Times New Roman", Font.BOLD, 25));
+		lblEnterCarThat.setBounds(54, 608, 358, 19);
+		contentPane.add(lblEnterCarThat);
+		
+		textField_7 = new JTextField();
+		textField_7.setBounds(432, 608, 281, 20);
+		contentPane.add(textField_7);
+		textField_7.setColumns(10);
+		btnNext.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e1)
+			{
+				Connection c=driver.getConnection();
+				String s1=textField.getText();
+				String s2=textField_1.getText();
+				String s3=textField_2.getText();
+				String s4=textField_3.getText();
+				String s5=textField_4.getText();
+				String s6=textField_5.getText();
+				String s7=textField_6.getText();
+				String s8=textField_7.getText();
+				try
+				{
+					PreparedStatement ps=null;
+					ps=c.prepareStatement("insert into journey(ploc,dloc,jdate,jtime,kms,way,uname,cabname) VALUES(?,?,?,?,?,?,?,?)");
+					ps.setString(1,s1);
+					ps.setString(2,s2);
+					ps.setString(3,s3);
+					ps.setString(4,s4);
+					ps.setString(5,s5);
+					ps.setString(6,s6);
+					ps.setString(7,s7);
+					ps.setString(8,s8);
+					ps.executeUpdate();
+					
+
+				
+				w9 ow1=new w9();
+				ow1.main(null);
+				}
+				catch(SQLException e)
+				{
+					e.printStackTrace();
+				}
+
+				
+			}
+		});
+		
+		
+		
+
+	}
+}
+
